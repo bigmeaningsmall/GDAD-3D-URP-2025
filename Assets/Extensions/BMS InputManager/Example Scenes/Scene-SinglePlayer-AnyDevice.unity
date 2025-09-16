@@ -810,6 +810,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7080666282093615131, guid: 2c314b15354c8ac49b7053aac43b9a22, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: c83c9d0fbb36be243b0a7040f49cb718, type: 3}
+    - target: {fileID: 7080666282093615131, guid: 2c314b15354c8ac49b7053aac43b9a22, type: 3}
       propertyPath: m_DefaultControlScheme
       value: 
       objectReference: {fileID: 0}
