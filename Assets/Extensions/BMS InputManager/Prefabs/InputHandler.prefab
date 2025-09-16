@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 2393772080512708125}
-  debugAnalogInputs: 1
-  debugButtonInputs: 1
+  debugAnalogInputs: 0
+  debugButtonInputs: 0
 --- !u!114 &6553845810963998404
 MonoBehaviour:
   m_ObjectHideFlags: 0
