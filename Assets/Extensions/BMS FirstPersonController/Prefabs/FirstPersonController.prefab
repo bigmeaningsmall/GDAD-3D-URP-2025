@@ -43,7 +43,7 @@ Camera:
   m_GameObject: {fileID: 9156347143994207886}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
-  mouseSensitivity: 50
+  mouseSensitivity: 20
   walkSpeed: 4
   sprintSpeed: 6
   crouchSpeed: 1.5
@@ -221,8 +221,8 @@ MonoBehaviour:
   slideDuration: 0.7
   slideFovBoost: 5
   slideTiltAngle: 5
-  jumpSpeed: 4
-  gravity: 24.81
+  jumpSpeed: 5
+  gravity: 10
   coyoteTimeEnabled: 1
   coyoteTimeDuration: 0.2
   normalFov: 60
