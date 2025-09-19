@@ -84,12 +84,8 @@
 - Drag a decal material from the **Decals Folder** onto objects in the scene.
 - Optional: Import your own decal textures and create new decals using **Create \> Material \> Decal**.
 
-<figure>
-<img
-src="3D%20Art%20Production%20Pipeline%20Practical-media/f7602a6150decfb6ba81f519c9275be2bbf3ec20.png"
-title="wikilink" alt="RendererSettingsDecals.png" />
-<figcaption aria-hidden="true">RendererSettingsDecals.png</figcaption>
-</figure>
+<img width="1530" height="1395" alt="Renderer Settings Decals" src="https://github.com/user-attachments/assets/342900e5-08b7-4f6c-8a00-649b994908ad" />
+
 
 ------------------------------------------------------------------------
 
