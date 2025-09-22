@@ -41,7 +41,7 @@
 - If the player collects all items within the time limit, display a **"You Win"** message.
 - If time runs out before all items are collected, display a **"Game Over"** message.
 
-### **Key Concepts to Teach During the Practical**:
+### **Key Concepts to Understand During the Practical**:
 
 1.  **Unity Component Basics**: Adding components like Rigidbody, Colliders, and Camera to objects.
 2.  **Basic Player Movement**: Using `Input.GetAxis` to control player movement.
@@ -244,7 +244,7 @@ The `GameManager` handles the player's score, the game timer, and win/lose condi
 
 \*\* **Note - Normally we would call the script 'GameManager'. We are using 'GameManager_Collectathon' as we will develop other game examples in the same project to avoid name conflicts**
 
-\*\* **Note - We are using a 'lazy singleton' pattern for this by creating a static instance but not following good practice - This is ok for small projects but we will implement it in a robust way in larger projects using patterns and following programming principles **
+\*\* **Note - We are using a 'lazy singleton' pattern for this by creating a static instance but not following good practice - This is ok for small projects but we will implement it in a robust way in larger projects using patterns and following programming principles**
 
 ``` c#
 
@@ -373,6 +373,6 @@ Now, let's set up the user interface (UI) to display the score and timer.
 
 ### **Conclusion**:
 
-This guide walked you through creating a simple 3D Collect-a-thon Mini-Game in Unity. You re-learned how to implement player movement, spawn collectibles, track score and time, and manage win/lose conditions.
+This guide walked you through creating a simple 3D Collect-a-thon Mini-Game in Unity. You refreshed how to implement player movement, spawn collectibles, track score and time, and manage win/lose conditions.
 
 Use this as a foundation and extend the game by adding more features like power-ups, camera control, or obstacles!
