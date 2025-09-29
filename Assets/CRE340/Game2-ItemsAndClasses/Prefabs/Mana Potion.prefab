@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3296521168451574481}
   - component: {fileID: 6840177952589635534}
   - component: {fileID: 4159911558239757937}
+  - component: {fileID: 2007859388817373926}
   m_Layer: 0
   m_Name: Mana Potion
   m_TagString: Untagged
@@ -59,6 +60,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -105,3 +109,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2007859388817373926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596649149045805454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef79486c7dbb6f94aa6f5e0e3adb65b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemColor: {r: 1, g: 0.06132078, b: 0.8183633, a: 1}
+  manaRestoreAmount: 0
+  minRestoreAmount: 20
+  maxRestoreAmount: 50
