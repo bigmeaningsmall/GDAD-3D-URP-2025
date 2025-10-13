@@ -18,7 +18,7 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
         health -= damage;
 
         // Trigger the OnObjectDamaged event
-        HealthEventManager.OnObjectDamaged?.Invoke(health);
+        HealthEventManager.OnObjectDamaged?.Invoke(gameObject.name, health);
 
         ShowHitEffect();
 
@@ -27,7 +27,7 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
             Explode();
 
             // Trigger the OnObjectDestroyed event
-            HealthEventManager.OnObjectDestroyed?.Invoke(health);
+            HealthEventManager.OnObjectDestroyed?.Invoke(gameObject.name, health);
             Destroy(gameObject);
         }
     }

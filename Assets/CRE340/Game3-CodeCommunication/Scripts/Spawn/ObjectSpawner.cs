@@ -1,13 +1,17 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ObjectSpawner : MonoBehaviour  
 {  
-    public GameObject objectPrefab;  // A single prefab to spawn  
-    public Vector3 spawnArea;        // x, y, z (width, height, depth) of the spawn area  
-    public float spawnHeight = 0.5f; // Height at which to spawn objects
-    public float minSpawnInterval = 1f; // Minimum spawn interval (1 second)  
-    public float maxSpawnInterval = 3f; // Maximum spawn interval (3 seconds)  
-      
+    public GameObject[] objectPrefabs;  // Array of prefabs to spawn  
+    public Vector3 spawnArea;           // x, y, z (width, height, depth) of the spawn area 
+    public float spawnHeight = 0.5f; // Height at which to spawn objects 
+    public float minSpawnInterval = 2f; // Minimum spawn interval (2 seconds)  
+    public float maxSpawnInterval = 5f; // Maximum spawn interval (5 seconds)  
+  
+    // List to store references to all spawned objects  
+    public List<GameObject> spawnedObjects = new List<GameObject>();  
+  
     void Start()  
     {  
         // Start invoking the SpawnObject method at a random interval  
@@ -16,18 +20,25 @@ public class ObjectSpawner : MonoBehaviour
   
     void SpawnRandomObject()  
     {  
-        if (objectPrefab == null) return;  // Ensure there is something to spawn  
+        if (objectPrefabs.Length == 0) return;  // Ensure there is something to spawn  
+  
+        // Pick a random prefab from the array  
+        int randomIndex = Random.Range(0, objectPrefabs.Length);  
+        GameObject prefabToSpawn = objectPrefabs[randomIndex];  
   
         // Generate a random position within the spawn area  
         Vector3 randomPosition = new Vector3(  
             Random.Range(-spawnArea.x / 2, spawnArea.x / 2),  
-            Random.Range(spawnHeight, spawnHeight + spawnArea.y),  
+            Random.Range(spawnHeight, spawnHeight + spawnArea.y),
             Random.Range(-spawnArea.z / 2, spawnArea.z / 2)  
         );  
   
         // Instantiate the prefab at the random position  
-        Instantiate(objectPrefab, randomPosition, Quaternion.identity);  
-          
+        GameObject spawnedObject = Instantiate(prefabToSpawn, randomPosition, Quaternion.identity);  
+  
+        // Add the newly spawned object to the list  
+        spawnedObjects.Add(spawnedObject);  
+  
         // Reschedule the next spawn with a new random interval  
         CancelInvoke("SpawnRandomObject");  
         Invoke("SpawnRandomObject", Random.Range(minSpawnInterval, maxSpawnInterval));  
@@ -38,5 +49,11 @@ public class ObjectSpawner : MonoBehaviour
     {  
         Gizmos.color = Color.green;  
         Gizmos.DrawWireCube(transform.position, spawnArea);  
+    }  
+  
+    // Method to show the number of spawned objects in the list  
+    public void ShowSpawnedObjectsCount()  
+    {  
+        Debug.Log("Number of spawned objects: " + spawnedObjects.Count);  
     }  
 }
