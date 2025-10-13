@@ -4,6 +4,7 @@ public class ObjectSpawner : MonoBehaviour
 {  
     public GameObject objectPrefab;  // A single prefab to spawn  
     public Vector3 spawnArea;        // x, y, z (width, height, depth) of the spawn area  
+    public float spawnHeight = 0.5f; // Height at which to spawn objects
     public float minSpawnInterval = 1f; // Minimum spawn interval (1 second)  
     public float maxSpawnInterval = 3f; // Maximum spawn interval (3 seconds)  
       
@@ -20,7 +21,7 @@ public class ObjectSpawner : MonoBehaviour
         // Generate a random position within the spawn area  
         Vector3 randomPosition = new Vector3(  
             Random.Range(-spawnArea.x / 2, spawnArea.x / 2),  
-            Random.Range(0, spawnArea.y),  
+            Random.Range(spawnHeight, spawnHeight + spawnArea.y),  
             Random.Range(-spawnArea.z / 2, spawnArea.z / 2)  
         );  
   
