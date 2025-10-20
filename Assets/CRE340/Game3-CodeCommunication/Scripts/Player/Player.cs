@@ -22,7 +22,7 @@ public class Player : MonoBehaviour, IDamagable
         originalColor = mat.color;
         
         //update the player health in the gamemanager
-        GameManager.Instance.SetPlayerHealth(health);
+
     }
 
     public void TakeDamage(int damage)
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour, IDamagable
         HealthEventManager.OnObjectDamaged?.Invoke(gameObject.name, health);
         
         //update the player health in the gamemanager
-        GameManager.Instance.SetPlayerHealth(health);
+
 
         ShowHitEffect();
 

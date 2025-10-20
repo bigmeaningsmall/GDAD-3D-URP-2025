@@ -917,8 +917,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418530105}
-  - component: {fileID: 418530107}
-  - component: {fileID: 418530106}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -943,33 +941,6 @@ Transform:
   - {fileID: 1869754903}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418530106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418530104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8be97a80402c9a4ba486c4bc3e27f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNameText: {fileID: 123838494}
-  playerHealthText: {fileID: 1930494305}
-  scoreText: {fileID: 744910895}
---- !u!114 &418530107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418530104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c35c9f1fcaed6a448348786d5e3027e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &422393681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5470,7 +5441,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2028431571}
-  - component: {fileID: 2028431572}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5493,22 +5463,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2028431572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028431570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55adf46422b940b41836442b0c327e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4608686138521773477, guid: 99717ee5b370d314587ee4d63a67ee3b, type: 3}
-  playerName: Player1
-  playerHealth: 100
-  score: 0
 --- !u!1 &2046096013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,7 +5717,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2124962177}
   - component: {fileID: 2124962176}
-  - component: {fileID: 2124962178}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -5808,20 +5761,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2124962178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124962175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540061f6dc3c39d479a6ee460265da34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPosition: {x: 0, y: 1, z: 0}
-  spawnDelay: 0.5
 --- !u!1001 &2143510775
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour, IDamagable
         Debug.Log("Enemy has died");
         
         //increase the players score in the game manager
-        GameManager.Instance.AddScore(10); // Add 10 points when an enemy dies
+
         
     }
 
