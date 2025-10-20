@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7258476885222506284}
   - component: {fileID: 8172486550298442601}
   - component: {fileID: 6895253905487515342}
+  - component: {fileID: -1510050071693427394}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 36119876dc6b6ff4388da5ffe46fdc61, type: 2}
+  - {fileID: 2100000, guid: 8737b1dd7f36f5b4aab7b5efc6048786, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01267d0e8e850ef459f9b82b0f956500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 10
   rotationSpeed: 720
   cameraTransform: {fileID: 0}
 --- !u!114 &6895253905487515342
@@ -172,6 +173,21 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 5671860664751113054}
   bulletSpeed: 25
   shootCooldown: 0.1
+--- !u!114 &-1510050071693427394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608686138521773477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936f318ee1a462f4693987d630deab0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Player Name
+  health: 100
+  dieEffectPrefab: {fileID: 451700675374211951, guid: ad809b49731e7b848a7a210f77b03c79, type: 3}
 --- !u!1 &6769767681006078578
 GameObject:
   m_ObjectHideFlags: 0

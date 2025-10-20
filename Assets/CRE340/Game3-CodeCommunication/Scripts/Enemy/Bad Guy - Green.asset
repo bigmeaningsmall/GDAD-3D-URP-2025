@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Bad Guy - Green
   m_EditorClassIdentifier: 
   enemyName: Bad Guy - Green
-  health: 4
+  health: 2
+  damage: 4
   speed: 5
   enemyColor: {r: 0.025367955, g: 0.7830189, b: 0, a: 1}
