@@ -13,7 +13,6 @@ public class Player : MonoBehaviour, IDamagable
     {
         // Set the player name and initialize player stats
         gameObject.name = playerName;
-        Debug.Log($"Player {playerName} spawned with {health} health.");
     }
 
     private void Start()
@@ -21,6 +20,9 @@ public class Player : MonoBehaviour, IDamagable
         // Initialize material and original color
         mat = GetComponent<Renderer>().material;
         originalColor = mat.color;
+        
+        //update the player health in the gamemanager
+        GameManager.Instance.SetPlayerHealth(health);
     }
 
     public void TakeDamage(int damage)
@@ -32,7 +34,7 @@ public class Player : MonoBehaviour, IDamagable
         HealthEventManager.OnObjectDamaged?.Invoke(gameObject.name, health);
         
         //update the player health in the gamemanager
-        
+        GameManager.Instance.SetPlayerHealth(health);
 
         ShowHitEffect();
 
