@@ -3,7 +3,7 @@ using System;
 
 public class Subject : MonoBehaviour
 {
-    public event Action ThingHappened ;
+    public static event Action ThingHappened;
 
     void Start(){
         DoThing();
@@ -11,7 +11,10 @@ public class Subject : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             DoThing();
+        }
+        
     }
     
     public void DoThing()
