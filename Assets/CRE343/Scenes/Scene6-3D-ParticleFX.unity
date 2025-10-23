@@ -11315,13 +11315,14 @@ GameObject:
   - component: {fileID: 481859435}
   - component: {fileID: 481859434}
   - component: {fileID: 481859433}
+  - component: {fileID: 481859436}
   m_Layer: 0
   m_Name: VFX_GraphTest1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!73398921 &481859433
 VFXRenderer:
   serializedVersion: 1
@@ -11330,7 +11331,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481859432}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -11462,6 +11463,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1253894671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481859436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481859432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adfc5efa1485484aacc10caf8786cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &489689045
 PrefabInstance:
   m_ObjectHideFlags: 0
