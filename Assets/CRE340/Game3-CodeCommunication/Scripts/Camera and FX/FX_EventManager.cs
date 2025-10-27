@@ -1,5 +1,5 @@
 
-public static class FeedbackEventManager
+public static class FX_EventManager
 {
     //define a delegate for camera shake events
     public delegate void CameraEvent_Shaker(float frequency, float amplitude, float duration);

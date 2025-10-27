@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FXTestInput : MonoBehaviour
+public class TestFX : MonoBehaviour
 {
     [Header("Keybinds")]
     public KeyCode shakeKey = KeyCode.Alpha1;
@@ -21,14 +21,14 @@ public class FXTestInput : MonoBehaviour
         if (Input.GetKeyDown(shakeKey))
         {
             Debug.Log("[FXTestInput] Triggered Camera Shake");
-            FeedbackEventManager.ShakeCamera(shakeFrequency, shakeAmplitude, shakeDuration);
+            FX_EventManager.ShakeCamera(shakeFrequency, shakeAmplitude, shakeDuration);
         }
 
         // Press 2 to trigger Chromatic Aberration
         if (Input.GetKeyDown(chromaKey))
         {
             Debug.Log("[FXTestInput] Triggered Chromatic Aberration");
-            FeedbackEventManager.ChromaticAberrationLerp(chromaIntensity, chromaDuration);
+            FX_EventManager.ChromaticAberrationLerp(chromaIntensity, chromaDuration);
         }
     }
 }

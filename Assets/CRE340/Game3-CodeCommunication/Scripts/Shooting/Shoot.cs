@@ -50,5 +50,8 @@ public class Shoot : MonoBehaviour
 
         // Update the last shoot time to enforce cooldown
         lastShootTime = Time.time;
+        
+        //TODO - add a camera shake effect when shooting  
+        FX_EventManager.ShakeCamera(8f, 1f, 0.25f);
     }
 }

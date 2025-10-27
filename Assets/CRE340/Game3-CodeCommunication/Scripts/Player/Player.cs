@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class Player : MonoBehaviour, IDamagable
 {
@@ -8,6 +10,16 @@ public class Player : MonoBehaviour, IDamagable
 
     private Material mat;
     private Color originalColor;
+
+
+    private void OnEnable(){
+        // TODO - add an animation event to play the spawn animation tween  
+        // Store the original scale so we can return to it later
+        Vector3 initialScale = transform.localScale;
+        //scale the crate up from 0 to 1 in 1 second using DOTween  
+        transform.localScale = Vector3.zero;  
+        transform.DOScale(initialScale, 1f).SetEase(Ease.OutBounce);
+    }
 
     private void Awake()
     {
@@ -38,6 +50,11 @@ public class Player : MonoBehaviour, IDamagable
 
 
         ShowHitEffect();
+        
+        //TODO - add a camera shake effect when the player is hit  
+        FX_EventManager.ShakeCamera(6f,2f,1f );
+        //TODO - add a chromatic aberation lerp effect when the player is hit  
+        FX_EventManager.ChromaticAberrationLerp(1f, 1.0f);
 
         // Check if the player has died
         if (health <= 0)

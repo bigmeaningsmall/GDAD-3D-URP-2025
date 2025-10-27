@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class UI_Display : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class UI_Display : MonoBehaviour
         if(playerHealthText != null)
         {
             playerHealthText.text = "Health: " + playerHealth.ToString();
+            //TODO - add a health animation effect  
+            playerHealthText.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.5f, 10, 1f);
         }
     }
 
@@ -32,6 +35,8 @@ public class UI_Display : MonoBehaviour
         if(scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString();
+            //TODO - add a score animation effect  
+            scoreText.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.5f, 10, 1f);
         }
     }
 }

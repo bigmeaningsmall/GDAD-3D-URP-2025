@@ -14,12 +14,12 @@ public class CameraShaker : MonoBehaviour
 
     private void OnEnable()
     {
-        FeedbackEventManager.ShakeCamera += ShakeCamera;
+        FX_EventManager.ShakeCamera += ShakeCamera;
     }
 
     private void OnDisable()
     {
-        FeedbackEventManager.ShakeCamera -= ShakeCamera;
+        FX_EventManager.ShakeCamera -= ShakeCamera;
     }
 
     private void Awake()
