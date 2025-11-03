@@ -666,7 +666,7 @@ MonoBehaviour:
   Composition:
     ScreenPosition: {x: 0, y: 0}
     DeadZone:
-      Enabled: 0
+      Enabled: 1
       Size: {x: 0.2, y: 0.2}
     HardLimits:
       Enabled: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 10, y: 10, z: 10}
+    PositionDamping: {x: 4, y: 10, z: 10}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -750,8 +750,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323721651}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 17.25, z: -21.14}
+  m_LocalRotation: {x: 0.38268346, y: 0.000000008647124, z: 0.000000007209976, w: 0.92387956}
+  m_LocalPosition: {x: 0.42705, y: 16, z: -14.94938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -874,8 +874,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 17.25, z: -21.14}
+  m_LocalRotation: {x: 0.3826835, y: 0.0000000140429925, z: -0.000000005816798, w: 0.92387956}
+  m_LocalPosition: {x: 0.42705, y: 16, z: -14.94938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6131,7 +6131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124962175}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abadda5c2dc314642ab16100ab9c0a62, type: 3}
   m_Name: 
@@ -6139,7 +6139,6 @@ MonoBehaviour:
   objectPrefabs:
   - {fileID: 6463700466641665127, guid: 0485865646f71e942abfa1f5fdb402a0, type: 3}
   - {fileID: 2465385238679860290, guid: 54ee2471877d89343bd27a2d172395af, type: 3}
-  - {fileID: 5932051583423400186, guid: 52eb81433bef88947a031eb9c7cb6285, type: 3}
   - {fileID: 5153894257583250854, guid: 065a19eb99dc43c4e92587f8bc142f46, type: 3}
   spawnArea: {x: 22, y: 0, z: 22}
   spawnHeight: 1
@@ -6193,8 +6192,8 @@ MonoBehaviour:
   - {fileID: 3495487341543496685, guid: e7ebd5a0bd3ece3428b5ab05941eec4b, type: 3}
   spawnArea: {x: 22, y: 0, z: 22}
   spawnHeight: 1
-  minSpawnInterval: 1
-  maxSpawnInterval: 3
+  minSpawnInterval: 10
+  maxSpawnInterval: 20
   spawnedObjects: []
 --- !u!1001 &2143510775
 PrefabInstance:
