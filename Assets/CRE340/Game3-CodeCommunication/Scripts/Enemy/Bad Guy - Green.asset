@@ -17,4 +17,4 @@ MonoBehaviour:
   damage: 4
   speed: 2
   enemyColor: {r: 0.025367955, g: 0.7830189, b: 0, a: 1}
-  enemyPrefab: {fileID: 2465385238679860290, guid: 54ee2471877d89343bd27a2d172395af, type: 3}
+  enemyPrefab: {fileID: 6463700466641665127, guid: 0485865646f71e942abfa1f5fdb402a0, type: 3}
