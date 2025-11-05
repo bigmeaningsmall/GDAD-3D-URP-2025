@@ -47,6 +47,9 @@ public class Player : MonoBehaviour, IDamagable
         
         //update the player health in the gamemanager
         GameManager.Instance.SetPlayerHealth(health);
+        
+        //TODO - add an audio feedback when the player is hit  
+
 
 
         ShowHitEffect();
@@ -74,6 +77,9 @@ public class Player : MonoBehaviour, IDamagable
         {
             Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         }
+        
+        //TODO - add and audio feedback when the player dies  
+
 
         // Optional: Add any additional death logic (e.g., respawn, game over)
        

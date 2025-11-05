@@ -38,5 +38,8 @@ public class UI_Display : MonoBehaviour
             //TODO - add a score animation effect  
             scoreText.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.5f, 10, 1f);
         }
+        
+
+        //TODO - add and audio feedback when hitting an object
     }
 }

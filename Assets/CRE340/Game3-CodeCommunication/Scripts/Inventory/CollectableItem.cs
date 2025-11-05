@@ -35,6 +35,8 @@ public class CollectableItem : MonoBehaviour
     public void Collect() {
         inventoryManager.AddItem(itemData); // Add the item to the inventory
         Collected();
+        
+        //TODO - add and audio feedback when hitting an object
     }
 
     private void Collected() {

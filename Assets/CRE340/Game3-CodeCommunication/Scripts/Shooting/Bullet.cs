@@ -27,9 +27,11 @@ public class Bullet : MonoBehaviour
             // Call the IDamagable interface to Take damage and show hit effect 
             damageable.TakeDamage(damage);  
             damageable.ShowHitEffect();  
+            
+            //TODO - add and audio feedback when hitting an object
         }
         
-        // Destroy the bullet after it collides with an object
-        Destroy(gameObject);
+        // // Destroy the bullet after it collides with an object
+        // Destroy(gameObject);
     }
 }

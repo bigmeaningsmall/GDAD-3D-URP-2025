@@ -60,5 +60,7 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
+        
+        //TODO - add and audio feedback when the crate explodes 
     }
 }

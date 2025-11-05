@@ -39,6 +39,9 @@ public class Enemy : EnemyBase
         HealthEventManager.OnObjectDamaged?.Invoke(gameObject.name, health);
 
         ShowHitEffect();
+        
+        //TODO - add and audio feedback when the enemy is hit  
+
 
         if (health <= 0)
         {
@@ -57,15 +60,23 @@ public class Enemy : EnemyBase
             Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         }
 
-        // Optional: add death logic, like spawning loot or playing an animation
-        Destroy(gameObject);
-
-        // Debug log to show that the enemy has died
-        Debug.Log("Enemy has died");
-        
         //increase the players score in the game manager
         GameManager.Instance.AddScore(10);
         
+        //TODO - add and audio feedback when the enemy dies  
+
+        
+        // Debug log to show that the enemy has died
+        Debug.Log("Enemy has died");
+        
+        // Optional: add death logic, like spawning loot or playing an animation
+        Destroy(gameObject);
+
+
+        
+
+        
+
     }
 
     public override void Move()
