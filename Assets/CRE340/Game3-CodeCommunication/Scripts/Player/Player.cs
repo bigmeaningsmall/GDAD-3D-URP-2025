@@ -49,7 +49,7 @@ public class Player : MonoBehaviour, IDamagable
         GameManager.Instance.SetPlayerHealth(health);
         
         //TODO - add an audio feedback when the player is hit  
-
+AudioEvent.PlaySFX("Debuff", 0.7f, true); // with random pitch
 
 
         ShowHitEffect();
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour, IDamagable
         }
         
         //TODO - add and audio feedback when the player dies  
-
+AudioEvent.PlaySFX("Debuff", 1.0f);
 
         // Optional: Add any additional death logic (e.g., respawn, game over)
        

@@ -40,6 +40,7 @@ public class UI_Display : MonoBehaviour
         }
         
 
-        //TODO - add and audio feedback when hitting an object
+        //TODO - add and audio feedback when UI is called
+        AudioEvent.PlaySFX("UI Beep", 1.0f, true); // with random pitch
     }
 }

@@ -41,7 +41,7 @@ public class Enemy : EnemyBase
         ShowHitEffect();
         
         //TODO - add and audio feedback when the enemy is hit  
-
+        AudioEvent.PlaySFX("Flesh Hit", 1.0f, true); // with random pitch
 
         if (health <= 0)
         {
@@ -64,7 +64,7 @@ public class Enemy : EnemyBase
         GameManager.Instance.AddScore(10);
         
         //TODO - add and audio feedback when the enemy dies  
-
+        AudioEvent.PlaySFX("Explosion Flesh", 1.0f, true); // with random pitch
         
         // Debug log to show that the enemy has died
         Debug.Log("Enemy has died");

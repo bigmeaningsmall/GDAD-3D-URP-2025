@@ -36,7 +36,8 @@ public class CollectableItem : MonoBehaviour
         inventoryManager.AddItem(itemData); // Add the item to the inventory
         Collected();
         
-        //TODO - add and audio feedback when hitting an object
+        //TODO - add and audio feedback when collecting an item
+        AudioEvent.PlaySFX("Special Powerup", 1.0f, true); // with random pitch
     }
 
     private void Collected() {

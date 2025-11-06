@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour
             damageable.ShowHitEffect();  
             
             //TODO - add and audio feedback when hitting an object
+            AudioEvent.PlaySFX("Slap Heavy", 1.0f, true); // with random pitch
         }
         
         // // Destroy the bullet after it collides with an object
