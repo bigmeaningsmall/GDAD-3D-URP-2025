@@ -8,9 +8,7 @@ public class Enemy : EnemyBase
     public int damage = 10; // Damage dealt by the enemy
     private int health = 10;
     public float speed = 2f;
-    public float chaseRange = 5f;
-    private IEnemyState currentState;
-    public Transform target;
+
     
     private void OnEnable(){
         // Store the original scale so we can return to it later
@@ -26,42 +24,12 @@ public class Enemy : EnemyBase
         health = enemyData.health;
         damage = enemyData.damage;
         speed = enemyData.speed;
-        chaseRange = enemyData.chaseRange; // Set chase range from enemy data
         
         GetComponent<Renderer>().material.color = enemyData.enemyColor;
         
         Debug.Log($"Enemy {enemyData.enemyName} spawned with {enemyData.health} health and {enemyData.speed} speed.");
     }
     
-    private void Start()
-    {
-        SetState(new EnemyState_Idle());
-        Invoke("LocatePlayer", 1f);
-    }
-
-    private void Update()
-    {
-        currentState?.Update(this);
-    }
-    
-    public void SetState(IEnemyState newState)
-    {
-        currentState?.Exit(this);
-        currentState = newState;
-        currentState?.Enter(this);
-    }
-    
-    public string GetCurrentStateName()
-    {
-        return currentState != null ? currentState.GetType().Name.Replace("Enemy", "") : "No State";
-    }
-    private void LocatePlayer()
-    {
-        if (target == null)
-        {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
-    }
     
     // Method to handle taking damage (from player or other sources)
     public override void TakeDamage(int damage)
