@@ -20,6 +20,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamagable
 
     public void ShowHitEffect()
     {
+        mat = GetComponent<Renderer>().material;
         // Apply hit effect by changing the material color to red
         mat.color = Color.red;
         Invoke("ResetMaterial", 0.1f);           // Reset after a short delay
@@ -29,5 +30,6 @@ public abstract class EnemyBase : MonoBehaviour, IDamagable
     {
         // Reset material color to the original color
         mat.color = originalColor;
+        mat.color = GetComponent<Enemy>().enemyData.enemyColor;
     }
 }
