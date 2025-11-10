@@ -324,7 +324,7 @@ public class State_Patrol : IState
     Each state can be tested and debugged in isolation with clear console logs.
     
 4. **Readability**  
-    The agent stays minimal — it doesn’t contain large blocks of conditional logic.
+    The agent stays minimal. it doesn’t contain large blocks of conditional logic or a giant class for all the things the agent can do.
     
 5. **Real-world Application**  
     Commonly used for AI characters, player controllers, game systems, or menus where behaviour changes over time.
@@ -338,7 +338,7 @@ Once the pattern is in place, extending it is straightforward:
 
 - Create a new class that implements `IState`.
     
-- Define what happens in `Enter()`, `Tick()`, and `Exit()`.
+- Define what happens in `Enter()`, `Tick()`, and `Exit()`.P
     
 - Trigger it with `agent.ChangeState(new YourNewState(agent));`
     
