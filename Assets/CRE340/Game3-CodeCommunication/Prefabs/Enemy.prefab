@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8213651044925504877}
   - component: {fileID: 5928541780641257167}
   - component: {fileID: -4815430062608867743}
+  - component: {fileID: 3140871455690491993}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -156,7 +157,22 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: d2e4aae462a2c1f4997d29d951538cb8, type: 2}
   dieEffectPrefab: {fileID: 451700675374211951, guid: ad809b49731e7b848a7a210f77b03c79, type: 3}
   damage: 10
+  speed: 2
+  chaseRange: 5
+  target: {fileID: 0}
 --- !u!114 &-4815430062608867743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041641523765857172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4fa0c014860374bacdf10578ad7d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3140871455690491993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,9 +181,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6041641523765857172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b4fa0c014860374bacdf10578ad7d55, type: 3}
+  m_Script: {fileID: 11500000, guid: 1331a02a6e821fd48aed6a4c5efe6c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMesh: {fileID: 5033816904986977858}
 --- !u!1 &8986197284531551545
 GameObject:
   m_ObjectHideFlags: 0
