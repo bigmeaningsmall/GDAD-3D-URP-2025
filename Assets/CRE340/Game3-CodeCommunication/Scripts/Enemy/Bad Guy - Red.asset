@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Bad Guy - Red
   health: 1
-  damage: 14
-  speed: 5
+  damage: 10
+  speed: 4
   enemyColor: {r: 0.78431374, g: 0.058872122, b: 0, a: 1}
   enemyPrefab: {fileID: 2465385238679860290, guid: dfd2208d756437244a0189ed7b124491, type: 3}

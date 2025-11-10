@@ -314,9 +314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfterTime: 1
-  destructionTime: 5
+  destructionTime: 4
   destroyOnCollision: 1
-  collisionDestroyThreshold: 4
+  collisionDestroyThreshold: 1
   destroyOffScreen: 1
   destroyIfIdle: 0
   idleTimeThreshold: 3
