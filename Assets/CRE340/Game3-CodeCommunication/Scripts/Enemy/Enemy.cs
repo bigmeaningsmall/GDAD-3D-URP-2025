@@ -96,6 +96,11 @@ public class Enemy : EnemyBase
         //increase the players score in the game manager
         GameManager.Instance.AddScore(10);
         
+        
+        //TODO 
+        // Increase the player's experience based on enemy health
+        //GameManager.Instance.AddExperience(1 * enemyData.health);
+        
         //TODO - add and audio feedback when the enemy dies  
         AudioEvent.PlaySFX("Explosion Flesh", 1.0f, true); // with random pitch
         

@@ -7,6 +7,8 @@ public class UI_EventHandler
     public static event Action<string> OnPlayerNameChanged;
     public static event Action<int> OnPlayerHealthChanged;
     public static event Action<int> OnScoreChanged;
+    public static event Action<int> OnExperienceChanged;
+    public static event Action<int> OnCoinsChanged;
 
     // Method to invoke the player name change event
     public static void PlayerNameChanged(string playerName)
@@ -24,5 +26,14 @@ public class UI_EventHandler
     public static void ScoreChanged(int score)
     {
         OnScoreChanged?.Invoke(score);
+    }
+    
+    // Method to invoke the experience change event
+    public static void ExperienceChanged(int experience){
+        OnExperienceChanged?.Invoke(experience);
+    }
+    // Method to invoke the coins change event
+    public static void CoinsChanged(int coins){
+        OnCoinsChanged?.Invoke(coins);
     }
 }

@@ -41393,6 +41393,8 @@ MonoBehaviour:
   playerNameText: {fileID: 123838494}
   playerHealthText: {fileID: 1930494305}
   scoreText: {fileID: 744910895}
+  experienceText: {fileID: 1789228287}
+  coinsText: {fileID: 1641097634}
 --- !u!114 &418530107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66474,7 +66476,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 678401997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028431572}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &678401997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142110,6 +142124,7 @@ GameObject:
   - component: {fileID: 1409706794}
   - component: {fileID: 1409706792}
   - component: {fileID: 1409706791}
+  - component: {fileID: 1409706795}
   m_Layer: 0
   m_Name: General Spawner
   m_TagString: Untagged
@@ -142183,6 +142198,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1409706795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409706790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadda5c2dc314642ab16100ab9c0a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 4546864422307020229, guid: bf9af1b26e14c7441b76625e38b86253, type: 3}
+  spawnArea: {x: 22, y: 0, z: 22}
+  playerCheckArea: {x: 24, y: 0, z: 24}
+  startDelay: 5
+  minSpawnInterval: 5
+  maxSpawnInterval: 15
+  maxSpawnedObjects: 20
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  spawnedObjects: []
 --- !u!1001 &1410034086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159857,7 +159896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1579744305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028431572}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1579744305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168447,7 +168498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Health : 00'
+  m_text: 'Coins : 00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
   m_sharedMaterial: {fileID: -8212579064444525704, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
@@ -183063,7 +183114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Health : 00'
+  m_text: 'XP : 00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
   m_sharedMaterial: {fileID: -8212579064444525704, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
@@ -186577,7 +186628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1819734386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028431572}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ClearData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1819734386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208642,6 +208705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028431571}
   - component: {fileID: 2028431572}
+  - component: {fileID: 2028431573}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -208680,6 +208744,26 @@ MonoBehaviour:
   playerName: Player1
   playerHealth: 100
   score: 0
+--- !u!114 &2028431573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028431570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a00cced3c71e2f40847c6149ba16647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoLoad: 1
+  autoSave: 1
+  playerProperties:
+    name: Player
+    experience: 0
+    coins: 0
+    inventory: []
+  filePath: 
 --- !u!1001 &2031055945
 PrefabInstance:
   m_ObjectHideFlags: 0
