@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 1530435865}
   - component: {fileID: 1530435864}
   m_Layer: 0
-  m_Name: Data Serialisation (Save Manager)
+  m_Name: Data Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
