@@ -24,7 +24,7 @@ public class CollectableCoin : MonoBehaviour
     public void Collect()
     {
         // TODO Add coins to the GameManager
-        //GameManager.Instance.AddCoins(coinValue);
+        GameManager.Instance.AddCoins(coinValue);
 
         // Instantiate the collect effect prefab at the item's position
         if (collectEffectPrefab != null)

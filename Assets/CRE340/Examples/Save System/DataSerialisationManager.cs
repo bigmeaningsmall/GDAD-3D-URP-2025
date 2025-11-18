@@ -9,7 +9,9 @@ public class DataSerialisationManager : MonoBehaviour
     [Header("Data To Save")]
     public DataObject currentData = new DataObject();
 
-    private string FilePath => Path.Combine(Application.persistentDataPath, fileName);
+    //private string FilePath => Path.Combine(Application.persistentDataPath, fileName);
+    private string FilePath => Path.Combine("D:\\SaveLog", fileName);
+
 
     public void Save()
     {
