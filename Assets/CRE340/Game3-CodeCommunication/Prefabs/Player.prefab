@@ -172,10 +172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b55b1006c8c3349b395790a1d59c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7454579298947425618, guid: 572b3a8860411d448880f02cdc794d93, type: 3}
+  bulletPrefab: {fileID: 7454579298947425618, guid: 721129f19e4c2df4db6c40526d39b1f7, type: 3}
   bulletSpawnPoint: {fileID: 5671860664751113054}
   bulletSpeed: 25
   shootCooldown: 0.1
+  useObjectPooling: 1
 --- !u!114 &-1510050071693427394
 MonoBehaviour:
   m_ObjectHideFlags: 0
