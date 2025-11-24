@@ -1,4 +1,4 @@
-# **Object Pool Tutorial (Student Guide)**
+# **Object Pool Tutorial**
 
 _You have been given a scene with GameObjects already placed. Follow the steps and add the scripts below._
 
